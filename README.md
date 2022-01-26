@@ -18,4 +18,8 @@ Important Disclaimer: The author will not be held responsible for the abuse of t
 2) Automatically emails the keylogs file to the specified email with TLS encryption and exception handling.
 
 
-# MORE FEATURES TO COME SOON...
+# MORE FEATURES TO COME SOME, INCLUDING:
+
+1) Automatically exceute on computer startup
+2) Screen Recording and Clipboard Logging
+3) Support for other email service providers
