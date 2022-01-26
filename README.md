@@ -1,4 +1,4 @@
-# Advanced-Keylogger-in-Python
+# Advanced Keylogger in Python
 
 Important Disclaimer: The author will not be held responsible for the abuse of this program. This is only intended for educational purposes.
 
