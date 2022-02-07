@@ -17,7 +17,8 @@ Important Disclaimer: The author will not be held responsible for the abuse of t
 ## Features:
 
 1) Automatically stores keylogs with date and time to `keylogs.txt` file.
-2) Automatically emails the keylogs file to the specified email with SMTPLIB and TLS encryption and exception handling.
+2) Automatically emails the keylogs file to the specified email with SMTPLIB and TLS encryption and exception handling, afterwards deleting it.
+3) Includes IP address in email.
 
 ![image](https://user-images.githubusercontent.com/76885647/151258322-f3d1792e-7a4f-462f-b795-9330a092172c.png)
 
